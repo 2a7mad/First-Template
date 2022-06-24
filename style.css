@@ -1,0 +1,161 @@
+/* Start Variables */
+:root {
+  --main-color : rgb(0, 255, 255);
+}
+/* End Variables */
+
+/* Start Global Rules  */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+.header {
+  background: linear-gradient(rgba(99, 92, 92, 0.1), rgba(231, 237, 241, 0.3)), url(../images/bg.jpeg.jpg);
+  height: 100vh;
+  background-size: cover;
+}
+.container {
+  background-color: rgb(240, 240, 245);
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Rules  */
+
+
+/* Start Header  */
+.header {
+  padding: 20px;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container .logo {
+  width: 50px;
+}
+
+.container .links {
+  position: relative;
+}
+.container .links .icon:hover span:nth-child(2){
+    width: 100%;
+}
+
+.container .links .icon {
+  width: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.container .icon span {
+  background-color: #333;
+  margin-bottom: 5px;
+  height: 2px;
+
+}
+.container .icon span:first-child{
+  width: 100%;
+}
+.container .icon span:nth-child(2){
+  width: 60%;
+  transition: 0.3s;
+}
+.container .icon span:last-child{
+  width: 100%;
+}
+
+.container .links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(26, 49, 63);
+  position: absolute;
+  right: 0;
+  top: calc(100% + 15px);
+  min-width: 200px;
+  display: none;
+  transition: 0.5s;
+}
+.container .links ul::before {
+  content: '';
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent rgb(168, 168, 197) transparent;
+  position: absolute;
+  right: 0;
+  top: -20px;
+}
+
+.container .links:hover ul{
+  display: block;
+}
+
+
+.container .links ul a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+.container .links ul a:hover {
+  padding-left: 40px;
+}
+
+.container .links ul li:not(:last-child) a {
+  border-bottom: 1px solid rgb(106, 106, 131);
+}
+/* End Header  */
+
+.landing .intro-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+.landing .intro-text h1{
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 50px;
+}
+
+
+.landing .intro-text p{
+  margin: 0px;
+  color: white;
+  font-size: 19px;
+  line-height: 1.8;
+  width: 320px;
+  max-width: 100%;
+}
